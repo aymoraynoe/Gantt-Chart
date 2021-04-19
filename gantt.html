@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gantt Chart</title>
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="C:\Users\aymor\OneDrive\Desktop\Projects\Gantt Chart\gantt.css">
+
+</head>
+<body>
+	<nav class="navbar"> 
+		<div class="container">
+		<div class="navbar-header"> 
+			<h1> My Gantt Chart</h1>
+		</div>
+<!-------------------------- Popup Form ------------------------------------>
+		<div class="navbar-right">
+			<button type="button" class="btn btn-primary" id="addTask">
+			<h4>Add a Task +</h4></button> 
+		</div>
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+			    <span class="close">&times;</span>
+
+        <div class="jumbotron">
+            <h3 class="text-center">Add New Task</h3>
+            <form id="TaskForm">
+            	<div class="form-group">
+                    <label for="TaskName">Task Name</label>
+                    <input type="text" class="form-control"
+                    id="TaskNameInput" placeholder="Label the Task ...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="AssignedTo">Assigned To</label>
+                    <input type="text" class="form-control"
+                    id="AssignedToInput" placeholder="Assigned To ...">
+                </div>
+
+                <div class="form-group">
+				    <label for="TaskDescription">Task Description</label>
+				    <textarea class="form-control" id="TaskDescriptionInput" rows="3"></textarea>
+				</div>
+
+                <div class="form-group">
+ 					<label for="startDate" class="col-2 col-form-label">Start Date</label>
+ 						<div class="col-10">
+    				<input class="form-control" type="date" id="DateInput">
+                </div></div>
+
+                <div class="form-group">
+ 					<label for="startDate" class="col-2 col-form-label">End Date</label>
+ 						<div class="col-10">
+    				<input class="form-control" type="date" id="EndDateInput">
+                </div></div>
+
+                <button type="submit" id="startTask" class="btn btn-block btn-primary">
+                Start the Task</button>
+            </form>
+ 			</div>
+		</div>
+	</div>
+	</nav>
+<!-------------------------- CHART X AXIS ------------------------------------>
+	<div class="chart-wrapper">
+	  <ul class="chart-values">
+	    <li>Jan</li>
+	    <li>Feb</li>
+	    <li>Mar</li>
+	    <li>Apr</li>
+	    <li>May</li>
+	    <li>Jun</li>
+	    <li>Jul</li>
+	    <li>Aug</li>
+	    <li>Sep</li>
+	    <li>Oct</li>
+	    <li>Nov</li>
+	    <li>Dec</li>
+	  </ul>
+	<!-- CHART BARS -->
+	
+	
+	  <ul class="chart-bars" id = "taskList">
+	    <li data-duration="Feb½-Mar" data-color="#b03532">Task</li>
+	    <li data-duration="Jan-Jul" data-color="#33a8a5">Task</li>
+	    <li data-duration="Jan-May" data-color="#30997a">Task</li>
+	    <li data-duration="Feb½-Jun½" data-color="#6a478f">Task</li>
+	    <li data-duration="Jan-Mar½" data-color="#da6f2b">Task</li>
+	    <li data-duration="Apr-Apr" data-color="#3d8bb1">Task</li>
+	  </ul>
+
+	</div>
+</div>
+
+
+<script type="text/javascript" src="gantt.js"></script>
+</body>
+</html>
