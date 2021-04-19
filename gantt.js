@@ -1,7 +1,7 @@
 //create new array 
 var newTask = [];
 var x = 0;
-
+//Trying to make a HTML list from my an Array(newTask) 
 function makeUL(array){ 
 var createList = document.getElementById(taskList);
 var list = document.createElement('ul');
@@ -15,18 +15,12 @@ for (var i = 0; i < array.length; i++) {
 }
 }
 
-
-
-
-
-
-
 function createChart(e) { 
 
 
   }
 
- /*
+ /* code that does not work 
  alert(newTask.join("\n"));
    for (var i = 0; i < newTask.length; i++){ 
 var createList = document.getElementById(taskList);
@@ -39,8 +33,7 @@ createList.appendChild(newList);
 //grab items of two lists 
 const days = document.querySelectorAll(".chart-values li");
 const tasks = document.querySelectorAll(".chart-bars li");
-alert(tasks);
-/*convert days nodelist into a real array with spread operator
+//convert days nodelist into a real array with spread operator
 const daysArray = [...days];
 //loop through tasks 
 tasks.forEach(el => { 
@@ -207,7 +200,7 @@ function saveTask(e) {
       endDate = "Dec";
       break;
   }
-  /*
+  /* also code does not work 
 var ul = document.getElementById("taskList");
 var li = document.createElement("li");
 li.appendChild(document.createTextNode(taskName));
@@ -215,7 +208,9 @@ li.setAttribute("data-duration", '"' + startDate + '-' + endDate + '"');
 ul.appendChild(li);
 alert('"' + startDate + '-' + endDate + '"');
 
-*/
+*/ 
+	
+//add startdate and endate variables to array 
 newTask.push('"' + startDate + '-' + endDate + '"');
 
 
